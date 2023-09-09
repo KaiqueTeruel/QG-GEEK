@@ -1,0 +1,314 @@
+/* IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+/* Importa as fontes "Pacifico" e "Poppins" da Google Fonts com diferentes pesos */
+
+/* Definições gerais */
+* {
+  /* Define as fontes padrão para todos os elementos */
+  font-family: "Pacifico", cursive; /* Fonte para elementos cursive (escrita à mão) */
+  font-family: "Poppins", sans-serif; /* Fonte para elementos sans-serif (sem serifa) */
+
+  /* Reset de margens e preenchimentos para evitar espaçamentos indesejados */
+  margin: 0;
+  padding: 0;
+
+  /* Define a caixa de conteúdo para incluir borda e preenchimento */
+  box-sizing: border-box;
+
+  /* Configuração de rolagem suave */
+  scroll-behavior: smooth;
+
+  /* Adiciona um espaço de rolagem extra no topo para melhorar a legibilidade */
+  scroll-padding-top: 2rem;
+}
+
+/* Definição de variáveis de cor */
+:root {
+  /* Define variáveis CSS para cores personalizadas */
+  --container-color: #1a1e21; /* Cor de fundo para os containers */
+  --second-color: #fd8b44; /* Segunda cor destacada */
+  --text-color: #172317; /* Cor do texto principal */
+  --bg-color: #fff; /* Cor de fundo geral */
+}
+
+/* Estilização da seleção de texto */
+::selection {
+  /* Define a cor do texto selecionado */
+  color: var(--bg-color); /* Texto branco */
+  /* Define o fundo da seleção */
+  background: var(--second-color); /* Fundo da segunda cor destacada */
+}
+
+/* Estilos para o corpo da página */
+body {
+  /* Define a cor do texto principal */
+  color: var(--text-color);
+  /* Define o fundo geral da página */
+  background: var(--bg-color);
+}
+
+/* Remover decoração de links */
+a {
+  text-decoration: none; /* Remove sublinhado de links */
+}
+
+/* Remover marcadores de lista */
+li {
+  list-style: none; /* Remove marcadores de lista padrão */
+}
+
+/* Definir largura máxima para imagens */
+img {
+  width: 100%; /* Imagens ocupam 100% da largura disponível */
+}
+
+/* Espaçamento para as seções */
+section {
+  /* Define espaçamento vertical nas seções */
+  padding: 3rem 0 2rem; /* Espaçamento superior 3rem, inferior 2rem */
+}
+
+/* Estilos para o cabeçalho */
+header {
+  /* Define o cabeçalho fixo no topo da página */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* Define a ordem de camadas para garantir que o cabeçalho esteja acima do conteúdo */
+  z-index: 200%;
+}
+
+/* Estilos para o contêiner */
+.container {
+  /* Define a largura máxima do conteúdo e centraliza horizontalmente */
+  max-width: 1440px;
+  margin: auto;
+  width: 100%;
+}
+
+/* Estilos para a barra de navegação */
+.nav {
+  /* Configurações para exibir os itens da barra de navegação em uma linha */
+  background: var(--container-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px; /* Espaçamento interno */
+}
+
+/* Estilos para o logotipo */
+.logo {
+  /* Define o tamanho e peso da fonte para o logotipo */
+  font-size: 1.5rem;
+  font-weight: 600;
+  /* Define a cor do logotipo */
+  color: var(--bg-color);
+}
+
+/* Estilos para a parte colorida do logotipo */
+.logo span {
+  /* Define a cor da parte colorida do logotipo */
+  color: var(--second-color);
+}
+
+/* Estilos para o botão de login */
+.login {
+  /* Define o espaçamento interno, transformação de texto e borda arredondada */
+  padding: 8px 14px;
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-weight: 500;
+  border-radius: 4px;
+  /* Define a cor de fundo e a cor do texto para o botão de login */
+  background: var(--second-color);
+  color: var(--bg-color);
+}
+
+/* Efeito de hover no botão de login */
+.login:hover {
+  /* Define a cor de fundo diferente ao passar o mouse */
+  background: hsl(24, 98%, 58%);
+  /* Define a duração da transição de 0.3 segundos */
+  transition: 0.3s;
+}
+
+/* Estilos para a seção de destaque "HOME" */
+.home {
+  /* Define a largura, altura mínima e cor de fundo da seção de destaque */
+  width: 100%;
+  min-height: 440px; /* Altura mínima */
+  background: var(--container-color);
+  /* Configurações para centralizar o conteúdo verticalmente */
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilos para o texto da seção de destaque */
+.home-text {
+  /* Define a cor do texto na seção de destaque */
+  color: var(--bg-color);
+  text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para o título da seção de destaque */
+.home-title {
+  /* Define o tamanho da fonte do título da seção de destaque */
+  font-size: 3.5rem;
+}
+
+/* Estilos para o subtítulo da seção de destaque */
+.home-subtitle {
+  /* Define o tamanho da fonte e o peso para o subtítulo */
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/* Estilos para a seção de filtro de postagens */
+.post-filter {
+  /* Configurações para exibir os itens de filtro em uma linha */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Espaçamento entre os itens de filtro */
+  column-gap: 1.5rem;
+  /* Espaçamento superior com importância para substituir outros estilos */
+  margin-top: 2rem !important;
+}
+
+/* Estilos para os itens de filtro */
+.filter-item {
+  font-size: 0.9rem; /* Define o tamanho da fonte */
+  font-weight: 500; /* Define o peso da fonte */
+  cursor: pointer; /* Define o cursor do mouse como um ponteiro ao passar sobre o elemento */
+}
+
+/* Estilos para o filtro ativo */
+.active-filter {
+  background: var(
+    --second-color
+  ); /* Define a cor de fundo usando a segunda cor destacada */
+  color: var(--bg-color); /* Define a cor do texto */
+  padding: 4px 10px; /* Define o preenchimento interno */
+  border-radius: 4px; /* Define o raio da borda arredondada */
+}
+
+/* Estilos para os elementos de postagem */
+.post {
+  display: grid; /* Exibe as postagens em uma grade */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(360px, auto)
+  ); /* Define as colunas da grade com tamanho mínimo de 360px e auto-ajustável */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  gap: 2rem; /* Define o espaçamento entre as postagens */
+}
+
+/* Estilos para a caixa de postagem */
+.post-box {
+  background: var(--bg-color); /* Define a cor de fundo */
+  box-shadow: 0 4px 14px hsl(355deg 25% 15%/10%); /* Adiciona uma sombra à caixa */
+  padding: 15px; /* Define o preenchimento interno */
+  border-radius: 0.5rem; /* Define o raio da borda arredondada */
+}
+
+/* Estilos para a imagem da postagem */
+.post-img {
+  width: 100%; /* Define a largura como 100% */
+  height: 200px; /* Define a altura da imagem */
+  object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço, mantendo a proporção */
+  object-position: center; /* Centraliza a posição da imagem */
+  border-radius: 0.5rem; /* Define o raio da borda arredondada */
+}
+
+/* Estilos para a categoria da postagem */
+.category {
+  font-size: 0.9rem; /* Define o tamanho da fonte */
+  font-weight: 500; /* Define o peso da fonte */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  color: var(--second-color); /* Define a cor da categoria */
+}
+
+/* Estilos para o título da postagem */
+.post-title {
+  font-size: 1.3rem; /* Define o tamanho da fonte */
+  font-weight: 600; /* Define o peso da fonte */
+  color: var(--text-color); /* Define a cor do texto */
+  display: -webkit-box; /* Define a exibição como uma caixa flexível para controle de linhas */
+  -webkit-line-clamp: 2; /* Limita o número de linhas a 2 */
+  -webkit-box-orient: vertical; /* Define a orientação vertical da caixa */
+  overflow: hidden; /* Oculta o conteúdo excedente */
+}
+
+/* Estilos para a data da postagem */
+.post-date {
+  display: flex; /* Exibe a data em uma caixa flexível */
+  font-size: 0.875rem; /* Define o tamanho da fonte */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  font-weight: 400; /* Define o peso da fonte */
+  margin-top: 4px; /* Define a margem superior */
+}
+
+/* Estilos para a descrição da postagem */
+.post-description1 {
+  font-size: 0.9rem; /* Define o tamanho da fonte */
+  line-height: 1.5rem; /* Define a altura da linha */
+  margin: 5px 0 10px; /* Define as margens */
+  display: -webkit-box; /* Define a exibição como uma caixa flexível para controle de linhas */
+  -webkit-line-clamp: 3; /* Limita o número de linhas a 3 */
+  -webkit-box-orient: vertical; /* Define a orientação vertical da caixa */
+  overflow: hidden; /* Oculta o conteúdo excedente */
+}
+
+/* Estilos para o perfil do autor da postagem */
+.profile {
+  display: flex; /* Exibe o perfil em uma caixa flexível */
+  align-items: center; /* Alinha verticalmente os elementos */
+  gap: 10px; /* Define o espaçamento entre elementos */
+}
+
+/* Estilos para a imagem de perfil do autor */
+.profile-img {
+  width: 35px; /* Define a largura da imagem */
+  height: 35px; /* Define a altura da imagem */
+  border-radius: 50%; /* Define o raio da borda arredondada para criar uma aparência circular */
+  object-fit: cover; /* Ajusta a imagem para cobrir todo o espaço, mantendo a proporção */
+  object-position: center; /* Centraliza a posição da imagem */
+  border: 2px solid var(--second-color); /* Define uma borda sólida com a cor da segunda cor destacada */
+}
+
+/* Estilos para a seção de informações da postagem */
+.container-post {
+  padding: 40px; /* Define o preenchimento interno */
+  max-width: 1086px; /* Define a largura máxima */
+  margin: auto; /* Centraliza horizontalmente */
+}
+
+/* Estilos para a imagem dentro da seção de informações da postagem */
+.img-post {
+  margin: auto; /* Centraliza horizontalmente */
+  width: auto; /* Define a largura da imagem */
+  height: auto; /* Define a altura da imagem */
+}
+
+/* Estilos para o texto principal dentro da seção de informações da postagem */
+.text-post {
+  padding-top: 2rem; /* Define o preenchimento superior */
+  font-size: 1.4rem; /* Define o tamanho da fonte */
+}
+
+/* Estilos para o parágrafo dentro da seção de informações da postagem */
+.text-post p {
+  padding-top: 2rem; /* Define o preenchimento superior */
+  font-size: 1.4rem; /* Define o tamanho da fonte */
+}
+
+/* Estilos para o título dentro da seção de informações da postagem */
+.text-post h2 {
+  font-size: 2.2rem; /* Define o tamanho da fonte */
+}
+.footer {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+}
